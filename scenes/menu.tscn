@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://scenes/menu.gd" type="Script" id=2]
+[ext_resource path="res://scripts/menu.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 44
@@ -21,12 +21,31 @@ margin_bottom = 600.0
 color = Color( 0.145098, 0.145098, 0.145098, 1 )
 
 [node name="Level1" type="Button" parent="."]
-margin_left = 64.9999
-margin_top = 143.0
-margin_right = 225.0
-margin_bottom = 183.0
+margin_left = 64.9985
+margin_top = 143.676
+margin_right = 224.999
+margin_bottom = 183.676
 rect_rotation = 0.242008
+rect_pivot_offset = Vector2( 160, 0 )
 text = "Level 1"
+
+[node name="Level2" type="Button" parent="."]
+margin_left = 315.0
+margin_top = 144.0
+margin_right = 475.0
+margin_bottom = 184.0
+rect_rotation = 0.242008
+rect_pivot_offset = Vector2( 160, 0 )
+text = "Level 2"
+
+[node name="Level3" type="Button" parent="."]
+margin_left = 546.0
+margin_top = 144.0
+margin_right = 706.0
+margin_bottom = 184.0
+rect_rotation = 0.242008
+rect_pivot_offset = Vector2( 160, 0 )
+text = "Level 3"
 
 [node name="Label" type="Label" parent="."]
 margin_left = 350.0
@@ -39,3 +58,5 @@ text = "Type n Run"
 align = 1
 
 [connection signal="pressed" from="Level1" to="." method="_on_Level1_pressed"]
+[connection signal="pressed" from="Level2" to="." method="_on_Level2_pressed"]
+[connection signal="pressed" from="Level3" to="." method="_on_Level3_pressed"]
