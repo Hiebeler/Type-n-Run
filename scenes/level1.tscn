@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/WorldTiles/WorldTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/prefabs/CanvasLayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/prefabs/steve.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/prefabs/ParallaxBackground.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/prefabs/Finish.tscn" type="PackedScene" id=5]
 
 [node name="Level1" type="Node2D"]
 
@@ -18,3 +19,7 @@ tile_data = PoolIntArray( -65514, 9, 0, -65513, 2, 0, -65512, 10, 0, 65551, 9, 0
 [node name="CanvasLayer" parent="." instance=ExtResource( 2 )]
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 4 )]
+
+[node name="Node" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1823, 131 )
+scale = Vector2( 0.2, 0.2 )
