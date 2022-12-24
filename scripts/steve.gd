@@ -59,6 +59,10 @@ func move():
 			velocity.x = -SPEED
 			$Sprite.flip_h = true
 			$Sprite.play("walk")
+		StatesWalking.SPRINTLEFT:
+			velocity.x = -SPRINTSPEED
+			$Sprite.flip_h = true
+			$Sprite.play("walk")
 	if crouch:
 		$Sprite.play("crouch")
 
