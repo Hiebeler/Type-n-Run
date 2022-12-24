@@ -48,6 +48,15 @@ rect_rotation = 0.242008
 rect_pivot_offset = Vector2( 160, 0 )
 text = "Level 3"
 
+[node name="Level4" type="Button" parent="."]
+margin_left = 765.0
+margin_top = 144.0
+margin_right = 925.0
+margin_bottom = 184.0
+rect_rotation = 0.242008
+rect_pivot_offset = Vector2( 160, 0 )
+text = "Level 4"
+
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
@@ -58,6 +67,7 @@ custom_fonts/font = SubResource( 1 )
 text = "Type n Run"
 align = 1
 
-[connection signal="pressed" from="Level1" to="." method="_on_Level1_pressed"]
-[connection signal="pressed" from="Level2" to="." method="_on_Level2_pressed"]
-[connection signal="pressed" from="Level3" to="." method="_on_Level3_pressed"]
+[connection signal="pressed" from="Level1" to="." method="startLevel" binds= [ "1" ]]
+[connection signal="pressed" from="Level2" to="." method="startLevel" binds= [ "2" ]]
+[connection signal="pressed" from="Level3" to="." method="startLevel" binds= [ "3" ]]
+[connection signal="pressed" from="Level4" to="." method="startLevel" binds= [ "4" ]]
