@@ -8,4 +8,4 @@ func _ready():
 func _physics_process(delta):
 	if overlaps_body(body):
 		print("finish")
-		get_tree().change_scene("res://scenes/finishedLevel.tscn")
+		Global.goto_scene("res://scenes/finishedLevel.tscn")
