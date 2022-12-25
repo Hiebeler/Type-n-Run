@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/WorldTiles/WorldTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/prefabs/CanvasLayer.tscn" type="PackedScene" id=2]
@@ -6,7 +6,9 @@
 [ext_resource path="res://assets/background/desert/bg_mountains.png" type="Texture" id=4]
 [ext_resource path="res://scenes/prefabs/Finish.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/background/desert/bg_sky.png" type="Texture" id=6]
-[ext_resource path="res://assets/background/desert/bg_cloud1.png" type="Texture" id=7]
+[ext_resource path="res://assets/Tiles/desert/desertset.tres" type="TileSet" id=7]
+[ext_resource path="res://assets/background/desert/bg_blue_mountains.png" type="Texture" id=8]
+[ext_resource path="res://assets/background/desert/bg_cloudlines.png" type="Texture" id=9]
 
 [node name="Level1" type="Node2D"]
 
@@ -27,10 +29,31 @@ position = Vector2( 1721, 4 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0, 0 )
 motion_mirroring = Vector2( 1982, 2000 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 texture = ExtResource( 6 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 0, -100 )
+motion_scale = Vector2( 0.4, 0 )
+motion_mirroring = Vector2( 999.5, 2000 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 0, -150 )
+motion_scale = Vector2( 0.5, 0 )
+motion_mirroring = Vector2( 600, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 9 )
+centered = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( -100, -300 )
@@ -42,13 +65,10 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
 centered = false
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2( 0, -100 )
-motion_mirroring = Vector2( 700, 0 )
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
-texture = ExtResource( 7 )
-
-[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2( 229, 92 )
-texture = ExtResource( 7 )
+[node name="TileMap2" type="TileMap" parent="."]
+position = Vector2( 1, 0 )
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( 65557, 1, 0, 65558, 1, 0, 65559, 1, 0, 65560, 1, 0, 65561, 1, 0, 65562, 1, 0, 65563, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 1, 0, 196623, 1, 0, 196624, 1, 0, 196625, 1, 0, 196626, 1, 0, 196627, 1, 0, 196628, 1, 0, 393215, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327689, 1, 0 )

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="366.58633mm"
+   height="108.75298mm"
+   viewBox="0 0 366.58633 108.75298"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="bg_blue_mountains.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="718.94341"
+     inkscape:cy="212.32639"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:bbox-nodes="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-paths="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:snap-text-baseline="true"
+     inkscape:snap-page="false" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(5.1413988,-121.8486)">
+    <path
+       style="fill:#b7e1f8;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -5.1413988,162.35912 c 29.2410998,-2.62692 8.1021639,-39.16081 39.4417438,-35.25354 29.115546,3.62999 5.816212,34.59578 37.73856,37.46965 30.073565,2.70743 14.407939,-42.04514 34.840895,-42.58703 24.58383,-0.65198 5.16687,42.14685 32.58683,43.3883 22.13953,1.00238 9.51735,-41.57326 45.64928,-39.13591 28.42091,1.91719 11.4071,34.64821 59.55725,32.11459 19.96641,-1.05061 4.30114,-35.93306 38.65194,-33.79982 27.85536,1.72987 9.44724,34.65079 37.3509,36.90029 14.94039,1.20444 40.76894,0.88817 40.76894,0.88817 v 68.25776 H -5.1413988 Z"
+       id="path994"
+       sodipodi:nodetypes="csssssssscccc"
+       inkscape:export-filename="/home/daniebeler/Documents/coding/godot/Type-n-Run/assets/background/desert/bg_blue_mountains.png"
+       inkscape:export-xdpi="138.47586"
+       inkscape:export-ydpi="138.47586" />
+  </g>
+</svg>

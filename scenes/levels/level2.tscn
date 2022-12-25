@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/background/desert/bg_sky.png" type="Texture" id=1]
 [ext_resource path="res://scenes/prefabs/steve.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/WorldTiles/WorldTileset.tres" type="TileSet" id=3]
+[ext_resource path="res://assets/Tiles/desert/desertset.tres" type="TileSet" id=3]
 [ext_resource path="res://scenes/prefabs/CanvasLayer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/prefabs/Finish.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/prefabs/FallDownDetection.tscn" type="PackedScene" id=6]
@@ -14,11 +14,6 @@
 position = Vector2( -34, 324 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 4 )]
-
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource( 3 )
-format = 1
-tile_data = PoolIntArray( 458746, 9, 0, 458747, 2, 0, 458748, 2, 0, 458749, 2, 0, 458750, 2, 0, 458751, 2, 0, 393216, 2, 0, 393217, 2, 0, 393218, 2, 0, 393219, 2, 0, 393220, 10, 0, 524294, 9, 0, 524295, 2, 0, 524296, 2, 0, 524297, 2, 0, 524298, 2, 0, 524299, 2, 0, 524300, 2, 0, 524301, 2, 0, 524302, 10, 0, 720894, 9, 0, 720895, 2, 0, 655360, 2, 0, 655361, 2, 0, 655362, 2, 0, 655363, 2, 0, 655364, 10, 0, 786438, 9, 0, 786439, 2, 0, 786440, 2, 0, 786441, 2, 0, 786442, 10, 0, 917506, 9, 0, 917507, 2, 0, 917508, 10, 0, 1048582, 9, 0, 1048583, 2, 0, 1048584, 10, 0 )
 
 [node name="Finish" parent="." instance=ExtResource( 5 )]
 position = Vector2( 530, 965 )
@@ -70,3 +65,10 @@ texture = ExtResource( 7 )
 [node name="Sprite8" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2( 441, 290 )
 texture = ExtResource( 7 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( 458746, 13, 0, 458747, 14, 0, 458748, 14, 0, 458749, 14, 0, 458750, 14, 0, 458751, 14, 0, 393216, 14, 0, 393217, 14, 0, 393218, 14, 0, 393219, 14, 0, 393220, 15, 0, 524294, 13, 0, 524295, 14, 0, 524296, 14, 0, 524297, 14, 0, 524298, 14, 0, 524299, 14, 0, 524300, 14, 0, 524301, 14, 0, 524302, 15, 0, 720894, 13, 0, 720895, 14, 0, 655360, 14, 0, 655361, 14, 0, 655362, 14, 0, 655363, 14, 0, 655364, 15, 0, 786438, 13, 0, 786439, 14, 0, 786440, 14, 0, 786441, 14, 0, 786442, 15, 0, 917506, 13, 0, 917507, 14, 0, 917508, 15, 0, 1048582, 13, 0, 1048583, 14, 0, 1048584, 15, 0 )
