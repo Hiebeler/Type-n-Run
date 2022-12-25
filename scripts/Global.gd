@@ -7,15 +7,18 @@ func _ready():
 	current_scene = root.get_child(root.get_child_count() - 1)
 
 
-func goto_scene(path):
-	call_deferred("_deferred_goto_scene", path)
+func goto_scene(path, gameData = {}):
+	call_deferred("_deferred_goto_scene", path, gameData)
 
-func _deferred_goto_scene(path):
+func _deferred_goto_scene(path, gameData):
 	# It is now safe to remove the current scene
 	current_scene.free()
 
 	var newScene = ResourceLoader.load(path)
 	current_scene = newScene.instance()
+		
+	if gameData.hash() != {}.hash():
+		current_scene.test(gameData)
 
 	get_tree().root.add_child(current_scene)
 
