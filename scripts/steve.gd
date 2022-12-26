@@ -5,6 +5,7 @@ const SPEED = 180
 const SPRINTSPEED = 300
 const GRAVITY = 30
 const JUMPFORCE = -900
+const SPRINGFORCE = -1500
 const RIGHT = "right"
 const LEFT = "left"
 const JUMP = "jump"
@@ -24,6 +25,8 @@ func _ready():
 	add_child(crouchTimer)
 	crouchTimer.wait_time = 1
 	crouchTimer.connect("timeout", self, "stopCrouch")
+	
+	SignalBus.connect("SpringEntered", self, "spring")
 
 func _physics_process(delta):
 	move()
@@ -42,6 +45,14 @@ func jump():
 	JumpCounter += 1
 	if JumpCounter <= 2:
 		velocity.y = JUMPFORCE
+
+
+func spring():
+	if is_on_floor():
+		JumpCounter = 0
+	JumpCounter += 1
+	if JumpCounter <= 2:
+		velocity.y = SPRINGFORCE
 	
 func move():
 	match stateWalking:
