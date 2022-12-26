@@ -18,7 +18,7 @@ func _deferred_goto_scene(path, gameData):
 	current_scene = newScene.instance()
 		
 	if gameData.hash() != {}.hash():
-		current_scene.test(gameData)
+		current_scene.init(gameData)
 
 	get_tree().root.add_child(current_scene)
 

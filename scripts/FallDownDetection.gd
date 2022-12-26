@@ -1,7 +1,5 @@
 extends Area2D
 
-onready var body = get_tree().get_root().find_node("steve", true, false)
-
-func _physics_process(delta):
-	if overlaps_body(body):
+func _on_FallDownDetection_body_entered(body):
+	if body.name == "steve":
 		get_tree().reload_current_scene()

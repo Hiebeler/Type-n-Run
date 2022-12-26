@@ -1,9 +1,6 @@
 extends Control
 
-func _ready():
-	pass
-
-func test(gameData):
+func init(gameData):
 	$Label.text = "Level " + gameData.level
 
 func _on_Menu_pressed():

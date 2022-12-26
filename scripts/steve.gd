@@ -19,14 +19,13 @@ var crouch = false
 var crouchTimer
 
 func _ready():
-	var commandInput = get_tree().get_root().find_node("CanvasLayer", true, false)
-	commandInput.connect("line_entered", self, "lineEntered")
+	SignalBus.connect("LineEntered", self, "lineEntered")
+	SignalBus.connect("SpringEntered", self, "spring")
 	crouchTimer = Timer.new()
 	add_child(crouchTimer)
 	crouchTimer.wait_time = 1
 	crouchTimer.connect("timeout", self, "stopCrouch")
 	
-	SignalBus.connect("SpringEntered", self, "spring")
 
 func _physics_process(delta):
 	move()
