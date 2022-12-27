@@ -17,16 +17,18 @@ func save_data():
 
 func add_level(level):
 	var levels = game_data.levels
-	levels.add(levelToDictionary(level))
+	levels.append(levelToDictionary(level))
+	game_data.levels = levels
 	save_data()
 
 func load_data():
 	var file = File.new()
 	if not file.file_exists(SAVE_FILE):
+		print("file not exists")
 		var level1 = LevelModel.new()
 		level1.id = 1
 		game_data = {"levels": [levelToDictionary(level1)]}
-		print(game_data)
+
 		save_data()
 	file.open(SAVE_FILE, File.READ)
 	game_data = file.get_var()
