@@ -4,15 +4,14 @@ const SAVE_FILE = "user://save_file.save"
 var game_data = {}
 
 func _ready():
-	var dir := Directory.new()
-	dir.remove(SAVE_FILE)
 	load_data()
 
 func save_data():
+	print("saving")
 	var file = File.new()
 	file.open(SAVE_FILE, File.WRITE)
 	file.store_var(game_data)
-	print(file.get_as_text())
+	print(file.get_var())
 	file.close()
 
 func add_level(level):
@@ -22,19 +21,20 @@ func add_level(level):
 	save_data()
 
 func load_data():
+	
 	var file = File.new()
 	if not file.file_exists(SAVE_FILE):
 		print("file not exists")
 		var level1 = LevelModel.new()
 		level1.id = 1
 		game_data = {"levels": [levelToDictionary(level1)]}
-
 		save_data()
 	file.open(SAVE_FILE, File.READ)
 	game_data = file.get_var()
 	file.close()
 
 func getLevels():
+	print(game_data)
 	var levels = []
 	for dictlevel in game_data.levels:
 		levels.append(dictionaryToLevel(dictlevel))
