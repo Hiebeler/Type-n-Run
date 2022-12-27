@@ -31,6 +31,7 @@ margin_right = 224.999
 margin_bottom = 183.676
 rect_rotation = 0.242008
 rect_pivot_offset = Vector2( 160, 0 )
+disabled = true
 text = "Level 1"
 
 [node name="Level2" type="Button" parent="."]
@@ -40,6 +41,7 @@ margin_right = 475.0
 margin_bottom = 184.0
 rect_rotation = 0.242008
 rect_pivot_offset = Vector2( 160, 0 )
+disabled = true
 text = "Level 2"
 
 [node name="Level3" type="Button" parent="."]
@@ -49,6 +51,7 @@ margin_right = 706.0
 margin_bottom = 184.0
 rect_rotation = 0.242008
 rect_pivot_offset = Vector2( 160, 0 )
+disabled = true
 text = "Level 3"
 
 [node name="Level4" type="Button" parent="."]
@@ -58,6 +61,7 @@ margin_right = 925.0
 margin_bottom = 184.0
 rect_rotation = 0.242008
 rect_pivot_offset = Vector2( 160, 0 )
+disabled = true
 text = "Level 4"
 
 [node name="Label" type="Label" parent="."]
