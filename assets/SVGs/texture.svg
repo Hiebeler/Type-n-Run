@@ -50,16 +50,19 @@
        x="21.983971"
        y="102.74436" />
     <rect
-       style="fill:#436ab3;fill-opacity:1;stroke-width:0.715801"
+       style="fill:#121a3d;fill-opacity:1;stroke-width:0.715801"
        id="rect2058"
        width="160"
        height="160"
        x="201.98398"
        y="102.74436" />
     <path
-       style="fill:#436ab3;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#121a3d;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 381.98397,262.74407 h 160 V 102.74436 Z"
        id="path2465"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/daniebeler/Documents/coding/godot/Type-n-Run/assets/Tiles/path2465.png"
+       inkscape:export-xdpi="20.32"
+       inkscape:export-ydpi="20.32" />
   </g>
 </svg>
