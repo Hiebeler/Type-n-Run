@@ -1,17 +1,61 @@
-[gd_resource type="Theme" load_steps=5 format=2]
+[gd_resource type="Theme" load_steps=10 format=2]
 
 [ext_resource path="res://assets/fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.462745, 0.164706, 0.988235, 1 )
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.269404, 0.264679, 0.382812, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.188235, 0.180392, 0.376471, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.188235, 0.180392, 0.376471, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.188235, 0.180392, 0.376471, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.188235, 0.180392, 0.376471, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="DynamicFont" id=4]
 
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.188235, 0.180392, 0.376471, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [resource]
 Button/fonts/font = SubResource( 2 )
-Button/styles/normal = SubResource( 3 )
+Button/styles/disabled = SubResource( 7 )
+Button/styles/focus = SubResource( 8 )
+Button/styles/hover = SubResource( 6 )
+Button/styles/normal = SubResource( 5 )
+Button/styles/pressed = SubResource( 9 )
 Label/colors/font_color = Color( 1, 1, 1, 1 )
 Label/fonts/font = SubResource( 4 )
+LineEdit/styles/focus = SubResource( 10 )
