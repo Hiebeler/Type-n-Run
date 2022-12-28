@@ -20,11 +20,11 @@ margin_right = 1024.0
 margin_bottom = 600.0
 color = Color( 0.145098, 0.145098, 0.145098, 1 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = 306.0
-margin_top = 25.0
-margin_right = 681.0
-margin_bottom = 77.0
+[node name="LevelText" type="Label" parent="."]
+margin_left = 25.0
+margin_top = 16.0
+margin_right = 400.0
+margin_bottom = 68.0
 custom_colors/font_color = Color( 0.568627, 0.568627, 0.568627, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Finished Level ##"
@@ -38,5 +38,15 @@ margin_bottom = 257.0
 rect_rotation = 0.242008
 rect_pivot_offset = Vector2( 160, 0 )
 text = "Menu"
+
+[node name="TimeText" type="Label" parent="."]
+margin_left = 754.0
+margin_top = 11.0
+margin_right = 1009.0
+margin_bottom = 63.0
+custom_colors/font_color = Color( 0.568627, 0.568627, 0.568627, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Time: 20s"
+align = 1
 
 [connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
