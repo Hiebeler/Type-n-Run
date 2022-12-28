@@ -49,4 +49,14 @@ custom_fonts/font = SubResource( 1 )
 text = "Time: 20s"
 align = 1
 
+[node name="TimeRecord" type="Label" parent="."]
+margin_left = 752.0
+margin_top = 69.0
+margin_right = 1007.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0.568627, 0.568627, 0.568627, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Record: 10s"
+align = 1
+
 [connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]

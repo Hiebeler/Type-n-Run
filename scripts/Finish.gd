@@ -7,11 +7,15 @@ func _on_Finish_body_entered(body):
 		
 		SignalBus.emit_signal("FinishedLevel")
 		var time = get_parent().time
+		print(time)
 		
+		SaveGame.update_level(createLevelModel(int(levelIndex), true, time))
 		SaveGame.add_level(createLevelModel(int(levelIndex) + 1))
 		Global.goto_scene("res://scenes/finishedLevel.tscn", {"level": levelIndex, "time": time})
 
-func createLevelModel(levelIndex) -> LevelModel:
+func createLevelModel(levelIndex, completed = false, time = 0) -> LevelModel:
 		var level = LevelModel.new()
 		level.id = levelIndex
+		level.completed = completed
+		level.time = time
 		return level
