@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 var velocity = Vector2(0,0)
 const SPEED = 180
@@ -26,23 +26,26 @@ var dashing = false
 var dashDirection = Vector2.ZERO
 
 func _ready():
-	SignalBus.connect("LineEntered", self, "lineEntered")
-	SignalBus.connect("SpringEntered", self, "spring")
+	SignalBus.connect("LineEntered",Callable(self,"lineEntered"))
+	SignalBus.connect("SpringEntered",Callable(self,"spring"))
 	crouchTimer = Timer.new()
 	add_child(crouchTimer)
 	crouchTimer.wait_time = 1
-	crouchTimer.connect("timeout", self, "stopCrouch")
+	crouchTimer.connect("timeout",Callable(self,"stopCrouch"))
 	
 
 func _physics_process(delta):
 	move()
 	
 	if not is_on_floor():
-		$Sprite.play("air")
+		$Sprite2D.play("air")
 	
 	velocity.y = velocity.y + GRAVITY
 	
-	velocity = move_and_slide(velocity, Vector2.UP)
+	set_velocity(velocity)
+	set_up_direction(Vector2.UP)
+	move_and_slide()
+	velocity = velocity
 	velocity.x = lerp(velocity.x, 0, 0.1)
 
 func jump():
@@ -69,7 +72,7 @@ func dash():
 		velocity = dashDirection.normalized() * 3000
 		canDash = false
 		dashing = true
-		yield(get_tree().create_timer(0.5), "timeout")
+		await get_tree().create_timer(0.5).timeout
 		dashing = false
 		canDash = true
 	
@@ -77,37 +80,37 @@ func move():
 	if not dashing:
 		match stateWalking:
 			StatesWalking.IDLE:
-				$Sprite.play("idle")
+				$Sprite2D.play("idle")
 			StatesWalking.RIGHT:
 				velocity.x = SPEED
-				$Sprite.flip_h = false
-				$Sprite.play("walk")
+				$Sprite2D.flip_h = false
+				$Sprite2D.play("walk")
 			StatesWalking.SPRINTRIGHT:
 				velocity.x = SPRINTSPEED
-				$Sprite.flip_h = false
-				$Sprite.play("walk")
+				$Sprite2D.flip_h = false
+				$Sprite2D.play("walk")
 			StatesWalking.LEFT:
 				velocity.x = -SPEED
-				$Sprite.flip_h = true
-				$Sprite.play("walk")
+				$Sprite2D.flip_h = true
+				$Sprite2D.play("walk")
 			StatesWalking.SPRINTLEFT:
 				velocity.x = -SPRINTSPEED
-				$Sprite.flip_h = true
-				$Sprite.play("walk")
+				$Sprite2D.flip_h = true
+				$Sprite2D.play("walk")
 		if crouch:
-			$Sprite.play("crouch")
+			$Sprite2D.play("crouch")
 
 func stopCrouch():
 	$CollisionShape2D.scale = Vector2(1, 1)
 	if crouch:
-		$Sprite.position = Vector2($Sprite.position.x, $Sprite.position.y + 6)
+		$Sprite2D.position = Vector2($Sprite2D.position.x, $Sprite2D.position.y + 6)
 	crouch = false
 
 func startCrouch():
 	crouch = true
 	crouchTimer.start()
 	$CollisionShape2D.scale = Vector2(1, 0.8)
-	$Sprite.position = Vector2($Sprite.position.x, $Sprite.position.y - 6)
+	$Sprite2D.position = Vector2($Sprite2D.position.x, $Sprite2D.position.y - 6)
 	
 
 func lineEntered(input):

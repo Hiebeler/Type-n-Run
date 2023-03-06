@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/FallDownDetection.gd" type="Script" id=1]
 
-[sub_resource type="LineShape2D" id=1]
+[sub_resource type="WorldBoundaryShape2D" id=1]
 d = 8.94427
 
 [node name="FallDownDetection" type="Area2D"]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/fonts/Roboto-Regular.ttf" type="FontFile" id=1]
 [ext_resource path="res://scripts/finishedLevel.gd" type="Script" id=2]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 size = 44
 outline_size = 3
 outline_color = Color( 0.364706, 0.364706, 0.364706, 1 )
@@ -16,44 +16,44 @@ anchor_bottom = 1.0
 script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1024.0
-margin_bottom = 600.0
+offset_right = 1024.0
+offset_bottom = 600.0
 color = Color( 0.145098, 0.145098, 0.145098, 1 )
 
 [node name="LevelText" type="Label" parent="."]
-margin_left = 25.0
-margin_top = 16.0
-margin_right = 400.0
-margin_bottom = 68.0
+offset_left = 25.0
+offset_top = 16.0
+offset_right = 400.0
+offset_bottom = 68.0
 custom_colors/font_color = Color( 0.568627, 0.568627, 0.568627, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Finished Level ##"
 align = 1
 
 [node name="Menu" type="Button" parent="."]
-margin_left = 435.0
-margin_top = 217.0
-margin_right = 595.0
-margin_bottom = 257.0
-rect_rotation = 0.242008
-rect_pivot_offset = Vector2( 160, 0 )
+offset_left = 435.0
+offset_top = 217.0
+offset_right = 595.0
+offset_bottom = 257.0
+rotation = 0.242008
+pivot_offset = Vector2( 160, 0 )
 text = "Menu"
 
 [node name="TimeText" type="Label" parent="."]
-margin_left = 754.0
-margin_top = 11.0
-margin_right = 1009.0
-margin_bottom = 63.0
+offset_left = 754.0
+offset_top = 11.0
+offset_right = 1009.0
+offset_bottom = 63.0
 custom_colors/font_color = Color( 0.568627, 0.568627, 0.568627, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Time: 20s"
 align = 1
 
 [node name="TimeRecord" type="Label" parent="."]
-margin_left = 752.0
-margin_top = 69.0
-margin_right = 1007.0
-margin_bottom = 121.0
+offset_left = 752.0
+offset_top = 69.0
+offset_right = 1007.0
+offset_bottom = 121.0
 custom_colors/font_color = Color( 0.568627, 0.568627, 0.568627, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Record: 10s"

@@ -9,8 +9,7 @@ func _ready():
 	load_data()
 
 func save_data():
-	var file = File.new()
-	file.open(SAVE_FILE, File.WRITE)
+	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
 	file.store_var(game_data)
 	file.close()
 
@@ -40,10 +39,10 @@ func update_level(levelToUpdate):
 	save_data()
 
 func load_data():
-	var file = File.new()
-	if not file.file_exists(SAVE_FILE):
+	var file = FileAccess.open(SAVE_FILE, FileAccess.READ)
+	if not FileAccess.file_exists(SAVE_FILE):
 		createDefaultSet()
-	file.open(SAVE_FILE, File.READ)
+	file = FileAccess.open(SAVE_FILE, FileAccess.READ)
 	game_data = file.get_var()
 	print(game_data)
 	file.close()

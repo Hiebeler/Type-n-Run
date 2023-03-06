@@ -14,12 +14,12 @@ func _deferred_goto_scene(path, gameData):
 	current_scene.free()
 
 	var newScene = ResourceLoader.load(path)
-	current_scene = newScene.instance()
+	current_scene = newScene.instantiate()
 		
 	if gameData.hash() != {}.hash():
 		current_scene.init(gameData)
 
 	get_tree().root.add_child(current_scene)
 
-	# Optionally, to make it compatible with the SceneTree.change_scene() API.
+	# Optionally, to make it compatible with the SceneTree.change_scene_to_file() API.
 	get_tree().current_scene = current_scene

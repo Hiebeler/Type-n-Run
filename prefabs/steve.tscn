@@ -7,14 +7,14 @@
 radius = 26.0
 height = 16.0
 
-[node name="steve" type="KinematicBody2D"]
+[node name="steve" type="CharacterBody2D"]
 position = Vector2( 2, 0 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 frames = ExtResource( 1 )
 animation = "idle"
 playing = true
@@ -25,6 +25,6 @@ shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+follow_smoothing_enabled = true
