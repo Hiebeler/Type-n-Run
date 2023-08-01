@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var velocity = Vector2(0,0)
+var veloc = Vector2(0,0)
 const SPEED = 180
 const SPRINTSPEED = 300
 const GRAVITY = 30
@@ -40,20 +40,20 @@ func _physics_process(delta):
 	if not is_on_floor():
 		$Sprite2D.play("air")
 	
-	velocity.y = velocity.y + GRAVITY
+	veloc.y = veloc.y + GRAVITY
 	
-	set_velocity(velocity)
+	set_velocity(veloc)
 	set_up_direction(Vector2.UP)
 	move_and_slide()
-	velocity = velocity
-	velocity.x = lerp(velocity.x, 0, 0.1)
+	veloc = velocity
+	#veloc.x = lerp(veloc.x, 0, 0.1)
 
 func jump():
 	if is_on_floor():
 		JumpCounter = 0
 	JumpCounter += 1
 	if JumpCounter <= 2:
-		velocity.y = JUMPFORCE
+		veloc.y = JUMPFORCE
 
 
 func spring():
@@ -61,7 +61,7 @@ func spring():
 		JumpCounter = 0
 	JumpCounter += 1
 	if JumpCounter <= 2:
-		velocity.y = SPRINGFORCE
+		veloc.y = SPRINGFORCE
 
 func dash():
 	if canDash:
@@ -69,7 +69,7 @@ func dash():
 			dashDirection = Vector2(1,0)
 		if facing == Facings.LEFT:
 			dashDirection = Vector2(-1,0)
-		velocity = dashDirection.normalized() * 3000
+		veloc = dashDirection.normalized() * 3000
 		canDash = false
 		dashing = true
 		await get_tree().create_timer(0.5).timeout
@@ -82,19 +82,19 @@ func move():
 			StatesWalking.IDLE:
 				$Sprite2D.play("idle")
 			StatesWalking.RIGHT:
-				velocity.x = SPEED
+				veloc.x = SPEED
 				$Sprite2D.flip_h = false
 				$Sprite2D.play("walk")
 			StatesWalking.SPRINTRIGHT:
-				velocity.x = SPRINTSPEED
+				veloc.x = SPRINTSPEED
 				$Sprite2D.flip_h = false
 				$Sprite2D.play("walk")
 			StatesWalking.LEFT:
-				velocity.x = -SPEED
+				veloc.x = -SPEED
 				$Sprite2D.flip_h = true
 				$Sprite2D.play("walk")
 			StatesWalking.SPRINTLEFT:
-				velocity.x = -SPRINTSPEED
+				veloc.x = -SPRINTSPEED
 				$Sprite2D.flip_h = true
 				$Sprite2D.play("walk")
 		if crouch:
