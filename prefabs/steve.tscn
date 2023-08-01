@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://scripts/steve.gd" id="2"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
-radius = 8.0
-height = 16.0
+radius = 30.0
+height = 66.0
 
 [node name="steve" type="CharacterBody2D"]
 position = Vector2(2, 0)

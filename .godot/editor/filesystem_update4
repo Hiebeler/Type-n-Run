@@ -1,4 +1,5 @@
 res://default_env.tres
 res://scenes/menu.tscn
 res://assets/Theme.tres
-res://saving/SaveGame.gd
+res://prefabs/CanvasLayer.tscn
+res://prefabs/steve.tscn
